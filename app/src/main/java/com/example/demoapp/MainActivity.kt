@@ -1,5 +1,6 @@
 package com.example.demoapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.LinearLayout
@@ -27,6 +28,15 @@ class MainActivity : AppCompatActivity() {
 
 
         }
+        val btnIntent= findViewById<Button>(R.id.btnbutton)
+        btnIntent.setOnClickListener(){
+            intent= Intent(applicationContext, MainActivity2::class.java)
+            startActivity(intent)
+
+
+        }
 
     }
+
+    private fun setonClickListener(function: () -> Unit) {}
 }
